@@ -1,0 +1,9 @@
+This bug occurs when using Tailwind CSS with complex responsive design setups.  It's hard to pin down because the error is not a clear syntax error, but rather an unexpected outcome. The problem is that Tailwind's responsive modifiers (`sm:`, `md:`, `lg:`, etc.) aren't applying as expected in certain nested components or when combining multiple responsive classes.  For example, a button might correctly be styled for a small screen, but the styling doesn't update when the screen size increases.
+
+```html
+<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded sm:px-8 md:py-4 lg:text-xl">
+  Click Me
+</button>
+```
+
+In this example, the `px-8`, `py-4`, and `text-xl` classes might not apply correctly on larger screens, despite using the appropriate modifiers.
